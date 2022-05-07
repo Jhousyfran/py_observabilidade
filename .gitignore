@@ -1,3 +1,12 @@
+.code
+.vscode
+app/.docker/pgdata
+app/*.pyc
+app/__pycache__
+elasticsearch_data/
+
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
