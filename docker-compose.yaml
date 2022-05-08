@@ -13,7 +13,8 @@ services:
     networks: 
       - observability
   
-  web:
+  app:
+    container_name: appexample
     build: ./app
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
@@ -93,7 +94,16 @@ services:
     restart: on-failure
     networks: 
       - observability
-      
+
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    ports:
+      - "8280:80"
+    depends_on:
+      - app
+    networks: 
+      - observability
 networks:
   observability:
     external: true
