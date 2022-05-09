@@ -1,5 +1,7 @@
 # py_observabilidade
 
+![tela](https://www.ufsm.br/app/uploads/sites/791/2021/06/ELK-1.png)
+
 Teste técnico para montagem de um ambiente capaz de prover observabilidade e demonstrar capacidade técnica de criação do mesmo
 
 ### Sobre o Ambiente
@@ -38,3 +40,10 @@ $ mkdir elasticsearch_data
 ```shell
 $ docker-compose up -d 
 ```
+
+5. Para as aplicações
+
+|APP|ENDEREÇO/PORTA|
+|---|--------------|
+|kibana| http://localhost:5601|
+|app| http://localhost:8280|
